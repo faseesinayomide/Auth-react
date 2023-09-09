@@ -1,5 +1,36 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
+import walletimage from "../assets/wallets/images/photo_2021-07-13-16.27.25-removebg-preview.png";
+import wallet1 from "../assets/wallets/images/unnamed (3).png";
+import wallet2 from "../assets/wallets/images/download.png";
+import wallet3 from "../assets/wallets/images/en-coinbase-logo.jpg";
+import wallet4 from "../assets/wallets/images/Crypto.com-Buy-Bitcoin-Now-APK-MOD-Premium-Download-3.96.0.png";
+import wallet5 from "../assets/wallets/images/unnamed (2).png";
+import wallet6 from "../assets/wallets/images/safepal-1022b40e2ea3a4a6bb19cf6ff28d8b92.png";
+import wallet7 from "../assets/wallets/images/authereum.png";
+import wallet8 from "../assets/wallets/images/pO6fla5H_400x400.jpg";
+import wallet9 from "../assets/wallets/images/nebulas.png";
+import wallet10 from "../assets/wallets/images/tomo.png";
+import wallet11 from "../assets/wallets/images/enjin-coin-enj-logo.png";
+import wallet12 from "../assets/wallets/images/nimiq.png";
+import wallet13 from "../assets/wallets/images/parsiq.jpg";
+import wallet14 from "../assets/wallets/images/rainbow-207dda8d66f8ffc00a21e4fcc5ce0a73.png";
+import wallet15 from "../assets/wallets/images/wanchain.png";
+import wallet16 from "../assets/wallets/images/iotex.png";
+import wallet17 from "../assets/wallets/images/ethereum-classic.png";
+import wallet18 from "../assets/wallets/images/kin.png";
+import wallet19 from "../assets/wallets/images/14611.png";
+import wallet20 from "../assets/wallets/images/6Gk7Sdhs_400x400.jpg";
+import wallet21 from "../assets/wallets/images/8wVEhhpi_400x400.jpeg";
+import wallet22 from "../assets/wallets/images/RoeM48hT_400x400.png";
+import wallet23 from "../assets/wallets/images/nem-1024x1024.png";
+import wallet24 from "../assets/wallets/images/photo5940449033686465477.jpg";
+import wallet25 from "../assets/wallets/images/download (2).png";
+import wallet26 from "../assets/wallets/images/download (1).png";
+import wallet27 from "../assets/wallets/images/download.jpg";
+import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
+import wallet29 from "../assets/wallets/images/download (3).png";
+import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 
 const ConnectWallet = () => {
   return (
@@ -7,11 +38,11 @@ const ConnectWallet = () => {
       <div className="text-center py-14 px-10">
         <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
-          src="src/assets/wallets/images/photo_2021-07-13-16.27.25-removebg-preview.png"
+          src={walletimage}
           alt=""
         />
         <h1 className="text-slate-50 text-6xl mb-8 font-semibold">
-          How it works?
+          How it works ?
         </h1>
 
         <p className="text-slate-300 w-full sm:w-full md:w-[50%] lg:w-[50%] mx-auto text-[15px] leading-loose">
@@ -27,8 +58,8 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/unnamed (3).png"
               alt=""
+            src={wallet1}
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Trust
@@ -39,7 +70,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5 rounded-lg"
-              src="src/assets/wallets/images/download.png"
+              src={wallet2}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -51,7 +82,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5 rounded-lg"
-              src="src/assets/wallets/images/en-coinbase-logo.jpg"
+              src={wallet3}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -63,7 +94,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/Crypto.com-Buy-Bitcoin-Now-APK-MOD-Premium-Download-3.96.0.png"
+              src={wallet4}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -75,7 +106,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/unnamed (2).png"
+              src={wallet5}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -87,7 +118,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/safepal-1022b40e2ea3a4a6bb19cf6ff28d8b92.png"
+              src={wallet6}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -99,7 +130,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/authereum.png"
+              src={wallet7}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center   hover:text-blue-700">
@@ -111,7 +142,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/pO6fla5H_400x400.jpg"
+              src={wallet8}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -123,7 +154,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/nebulas.png"
+              src={wallet9}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -135,7 +166,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/tomo.png"
+              src={wallet10}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -147,7 +178,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/enjin-coin-enj-logo.png"
+              src={wallet11}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -159,7 +190,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/nimiq.png"
+              src={wallet12}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -171,7 +202,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/parsiq.jpg"
+              src={wallet13}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -183,7 +214,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/rainbow-207dda8d66f8ffc00a21e4fcc5ce0a73.png"
+              src={wallet14}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center   hover:text-blue-700">
@@ -195,7 +226,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/wanchain.png"
+              src={wallet15}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -207,7 +238,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/iotex.png"
+              src={wallet16}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -219,7 +250,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5 rounded-lg"
-              src="src/assets/wallets/images/ethereum-classic.png"
+              src={wallet17}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -231,7 +262,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/kin.png"
+              src={wallet18}
               alt=""
             />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
@@ -243,7 +274,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/14611.png"
+              src={wallet19}
               alt=""
             />
             <h5 className="text-yellow-500 text-center text-lg sm:text-lg md:text-xl lg:text-xl  hover:text-blue-700">
@@ -255,7 +286,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/6Gk7Sdhs_400x400.jpg"
+              src={wallet20}
               alt=""
             />
             <h5 className="text-yellow-500 text-center  hover:text-blue-700">
@@ -267,7 +298,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src=" src/assets/wallets/images/8wVEhhpi_400x400.jpeg"
+              src={wallet21}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -279,7 +310,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src=" src/assets/wallets/images/RoeM48hT_400x400.png"
+              src={wallet22}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -291,7 +322,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src=" src/assets/wallets/images/nem-1024x1024.png"
+              src={wallet23}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -303,7 +334,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/photo5940449033686465477.jpg"
+              src={wallet24}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -315,7 +346,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/download (2).png"
+              src={wallet25}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -327,7 +358,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/download (1).png"
+              src={wallet26}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -339,7 +370,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/download.jpg"
+              src={wallet27}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -351,7 +382,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/Monarch-Wallet.png"
+              src={wallet28}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -363,7 +394,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/download (3).png"
+              src={wallet29}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
@@ -375,7 +406,7 @@ const ConnectWallet = () => {
           <Link to="/submit">
             <img
               className="w-[90%] mb-5  rounded-lg"
-              src="src/assets/wallets/images/wallet-connect.03da5e3f.svg"
+              src={wallet30}
               alt=""
             />
             <h5 className="text-yellow-500 hover:text-blue-700 text-center">
