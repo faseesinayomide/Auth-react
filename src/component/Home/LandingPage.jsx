@@ -14,6 +14,7 @@ import {PiCubeThin} from 'react-icons/pi'
 import {GiAutoRepair} from 'react-icons/gi'
 import {RiNftLine} from 'react-icons/ri'
 import { Link } from 'react-router-dom';
+import heroimage from "../../assets/images/Learn_Illustration_What_is_DeFi-removebg-preview.png";
 
 
 const LandingPage  = () => {
@@ -54,7 +55,7 @@ const LandingPage  = () => {
 
         <div>
           <img
-            src="src/assets/images/Learn_Illustration_What_is_DeFi-removebg-preview.png"
+            src={heroimage}
             alt="hero banner"
             className="w-[1100px]"
           ></img>

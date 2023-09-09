@@ -1,13 +1,14 @@
 import React from 'react'
 import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 import { Link } from 'react-router-dom';
+import ctaImage from "../../assets/images/blockchain-3019121_1280-removebg-preview.png";
 
 const Cta = () => {
   return (
     <div className="flex my-[14%] text-center sm:text-center md:text-left lg:text-left   sm:my-[14%]  lg:my-[10%] justify-center flex-col sm:flex-col md:flex-row lg:flex-row items-center px-2 sm:px-2  md:px-9 lg:px-10 ">
       <div className="w-[100%]  rounded-xl mb-14 sm:mb-14 md:mb-0  lg:mb-0">
         <img
-          src="src/assets/images/blockchain-3019121_1280-removebg-preview.png"
+          src={ctaImage}
           className=" w-full sm:w-full md:w-[80%] lg:w-[80%]"
           alt="Everything You Need"
         ></img>
