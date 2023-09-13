@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <div className="">
         {" "}
-        <nav className="flex justify-between items-center py-20 container mx-auto px-8 sm:px-6 md:px-9 lg:px-10">
+        <nav className="flex justify-between  py-14 container mx-auto px-8 items-center sm:px-6 md:px-9 lg:px-10">
           <div className="">
             <a href="#" className="logo">
               <h2 className=" text-4xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#ffd300]">
@@ -25,7 +25,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <ul className={`  block flex-col sm:flex-col md:flex-row lg:flex-row   ${open ? 'block' : 'hidden' }`}>
+          <ul className={` md:flex absolute  md:pl-0 mt-8 h-full  pl-7 md:w-auto left-0 w-full  ${open ? 'top-20' : 'top-[-400px]' }`}>
             <li className="mr-5 text-2xl  text-[#ffd300]">
               <a href="#" className="">
                 Docs
@@ -50,8 +50,8 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div className="block sm:block md:hidden lg:hidden">
-            <RiMenu3Fill onClick={()=> setOpen(!open)} className="text-yellow-400 text-4xl" />
+          <div className=" md:hidden ">
+            <RiMenu3Fill onClick={()=> setOpen(!open)} className="text-yellow-400 text-5xl" />
           </div>
         </nav>
       </div>

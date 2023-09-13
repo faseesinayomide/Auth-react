@@ -31,6 +31,7 @@ import wallet27 from "../assets/wallets/images/download.jpg";
 import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
 import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
+import wallet31 from "../assets/wallets/images/defi.png"
 
 const ConnectWallet = () => {
   return (
@@ -56,11 +57,7 @@ const ConnectWallet = () => {
       <div className="grid grid-cols-3  sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-14 gap-x-24 px-10 container mx-auto py-[10%] ">
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              alt=""
-            src={wallet1}
-            />
+            <img className="w-[90%] mb-5  rounded-lg" alt="" src={wallet1} />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Trust
             </h5>
@@ -68,11 +65,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5 rounded-lg"
-              src={wallet2}
-              alt=""
-            />
+            <img className="w-[90%] mb-5 rounded-lg" src={wallet2} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Metamask
             </h5>
@@ -80,11 +73,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5 rounded-lg"
-              src={wallet3}
-              alt=""
-            />
+            <img className="w-[90%] mb-5 rounded-lg" src={wallet3} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Coin base
             </h5>
@@ -92,11 +81,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet4}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet4} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Crypto.com
             </h5>
@@ -104,11 +89,15 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet5}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet31} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
+             Defi
+            </h5>
+          </Link>
+        </div>
+        <div>
+          <Link to="/submit">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet5} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               undefined
             </h5>
@@ -116,11 +105,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet6}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet6} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Safepal
             </h5>
@@ -128,11 +113,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet7}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet7} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center   hover:text-blue-700">
               Authereum
             </h5>
@@ -140,11 +121,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet8}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet8} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Fint
             </h5>
@@ -152,11 +129,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet9}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet9} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Nebulas
             </h5>
@@ -164,11 +137,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet10}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet10} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Tomo
             </h5>
@@ -176,11 +145,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet11}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet11} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Enjin
             </h5>
@@ -188,11 +153,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet12}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet12} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Nimiq
             </h5>
@@ -200,11 +161,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet13}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet13} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Parsiq
             </h5>
@@ -212,11 +169,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet14}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet14} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center   hover:text-blue-700">
               Rainbow
             </h5>
@@ -224,11 +177,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet15}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet15} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Wanchain
             </h5>
@@ -236,11 +185,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet16}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet16} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Iotex
             </h5>
@@ -248,11 +193,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5 rounded-lg"
-              src={wallet17}
-              alt=""
-            />
+            <img className="w-[90%] mb-5 rounded-lg" src={wallet17} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Ethereum
             </h5>
@@ -260,11 +201,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet18}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet18} alt="" />
             <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               kin
             </h5>
@@ -272,11 +209,7 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet19}
-              alt=""
-            />
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet19} alt="" />
             <h5 className="text-yellow-500 text-center text-lg sm:text-lg md:text-xl lg:text-xl  hover:text-blue-700">
               Rice
             </h5>
@@ -284,132 +217,88 @@ const ConnectWallet = () => {
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet20}
-              alt=""
-            />
-            <h5 className="text-yellow-500 text-center  hover:text-blue-700">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet20} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Nami wallet
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet21}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet21} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Ledger live
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet22}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet22} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Bravos
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet23}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet23} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Nem
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet24}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet24} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               pera Algo
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet25}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet25} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Digitex
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet26}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet26} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Exodus
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet27}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet27} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Argent
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet28}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet28} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Monarch
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet29}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet29} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Cello
             </h5>
           </Link>
         </div>
         <div>
           <Link to="/submit">
-            <img
-              className="w-[90%] mb-5  rounded-lg"
-              src={wallet30}
-              alt=""
-            />
-            <h5 className="text-yellow-500 hover:text-blue-700 text-center">
+            <img className="w-[90%] mb-5  rounded-lg" src={wallet30} alt="" />
+            <h5 className="text-yellow-500 text-lg sm:text-lg md:text-xl lg:text-xl  text-center  hover:text-blue-700">
               Wallet Connect
             </h5>
           </Link>
