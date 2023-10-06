@@ -20,7 +20,7 @@ import heroimage from "../../assets/images/Learn_Illustration_What_is_DeFi-remov
 const LandingPage  = () => {
   return (
     <div>
-      <div className="flex mt-[8%] flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center px-7 sm:px-7 md:lg-px-[10%] lg:px-[7%]">
+      <div className="flex py-20 flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center px-7 sm:px-7 md:lg-px-[10%] lg:px-[7%]">
         <div className="mb-[20%] sm:mb-8 md:mb-0 lg:mb-0 ">
           <h1 className="text-white font-semibold text-4xl sm:text-4xl md:text-5xl lg:text-6xl mb-5">
             RESOLVE PROTOCOL

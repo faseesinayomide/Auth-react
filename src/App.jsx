@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/connect-wallet" element={<ConnectWallet />} />
         <Route path="/confirmation" element={<Confirmation />} />
 
-        <Route path="/submit" element={<SubmitWallet />} />``
+        <Route path="/submit" element={<SubmitWallet />} />
       </Route>
     )
   );
