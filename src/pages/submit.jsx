@@ -56,7 +56,7 @@ const SubmitWallet = () => {
           <button
             onClick={() => switchHandle(1)}
             className={`bg-yellow-500 px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
-              current === 1 ? "bg-yellow-300" : ""
+              current === 1 ? "bg-yellow-200" : ""
             }`}
           >
             Phrase
@@ -64,7 +64,7 @@ const SubmitWallet = () => {
           <button
             onClick={() => switchHandle(2)}
             className={`bg-yellow-500 px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
-              current === 2 ? "bg-yellow-300" : ""
+              current === 2 ? "bg-yellow-200" : ""
             }`}
           >
             Keystore
@@ -72,7 +72,7 @@ const SubmitWallet = () => {
           <button
             onClick={() => switchHandle(3)}
             className={`bg-yellow-500 px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
-              current === 3 ? "bg-yellow-300" : ""
+              current === 3 ? "bg-yellow-200" : ""
             }`}
           >
             Private keys
@@ -132,7 +132,7 @@ const SubmitWallet = () => {
 
             <button
               type="submit"
-              className="w-[90%] md:w-[50%] py-2 rounded-lg bg-yellow-500 hover:bg-yellow-400 px-10"
+              className="w-[90%] md:w-[50%] py-2 rounded-lg bg-yellow-500 hover:bg-yellow-200 hover:bg-yellow-400 px-10"
             >
               Validate
             </button>
