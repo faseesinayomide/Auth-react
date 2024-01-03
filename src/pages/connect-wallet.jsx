@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom';
 import walletimage from "../assets/wallets/images/photo_2021-07-13-16.27.25-removebg-preview.png";
 import wallet1 from "../assets/wallets/images/unnamed (3).png";
@@ -33,6 +33,8 @@ import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png"
 import wallet32 from "../assets/wallets/images/632baf916109eec51607f996_public.png";
+
+import Modal from '../component/Modal/Modal';
 
 const DATA = [
   { id: 1, wallet: "Trust", logo: wallet1 },
@@ -70,8 +72,69 @@ const DATA = [
 ];
 
 const ConnectWallet = () => {
+
+  const [showModal, setShowModal] = useState(false)
+  const [isError, setIsError] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const handleConnect = (id)=> {
+    console.log(id);
+
+    setShowModal(true)
+  }
+
+  const handleCloseModal = ()=>{
+    setShowModal(false)
+  }
+
+  const handleAutoConnect = ()=> {
+    setIsLoading(true);
+  setTimeout(()=> {
+    setIsLoading(false);
+      setIsError(true);
+      
+
+  }, 3000)
+
+   
+  }
   return (
     <>
+      {showModal && (
+        <Modal onCloseHandler={handleCloseModal}>
+          <div className="p-6 font-sans">
+            <div className="gap-8 border border-yellow-200 md:p-10 rounded-xl 0 p-10 w-full md:w-[400px]">
+              <h3 className="text-white text-4xl font-bold mb-10 text-center">
+                CONNECT WALLET
+              </h3>
+
+              <div className="flex flex-col gap-7">
+                <button
+                  onClick={handleAutoConnect}
+                  className="bg-yellow-300 rounded-md px-5 py-2 "
+                >
+                  {!isLoading ? "Connect" : "Syncronizing..."}
+                </button>
+                <div className="text-center">
+                  {isError && (
+                    <p className="text-red-500 italic">
+                      Blockchain error: Try to connect manually!
+                    </p>
+                  )}
+                </div>
+                {isError === true && (
+                  <div>
+                    <Link to="/submit">
+                      <button className="bg-yellow-300 w-full rounded-md px-5 py-2 ">
+                        Connect manually
+                      </button>
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
       <div className="text-center py-14 px-10">
         <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
@@ -93,8 +156,12 @@ const ConnectWallet = () => {
       <div className="grid grid-cols-3   sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-20 gap-x-24 px-10 container mx-auto py-[10%] ">
         {DATA.map((item) => {
           return (
-            <Link className='hover:scale-125' to="/submit">
-              <div className="" key={item.id}>
+            <>
+              <div
+                onClick={() => handleConnect(item.id)}
+                className=""
+                key={item.id}
+              >
                 <img
                   className="w-[100%] rounded-lg mb-5 "
                   src={item.logo}
@@ -106,7 +173,7 @@ const ConnectWallet = () => {
                   </button>
                 </div>
               </div>
-            </Link>
+            </>
           );
         })}
       </div>

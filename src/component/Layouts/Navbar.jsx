@@ -25,10 +25,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex   py-14 sm:py-6 md:py-20 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-7  2xl:px-0">
+      <nav className="flex   py-14 sm:py-6 md:py-20 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9  2xl:px-0">
         <div className="">
           <a href="#" className="logo">
-            <h2 className=" text-3xl sm:text-4xl  md:text-5xl lg:text-4xl font-extrabold text-slate-200">
+            <h2 className=" text-3xl sm:text-4xl  md:text-5xl  font-extrabold text-slate-200">
               ResolveProtocol
             </h2>
           </a>
