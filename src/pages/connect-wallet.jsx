@@ -104,19 +104,19 @@ const ConnectWallet = () => {
           <div className="p-6 font-sans">
             <div className="gap-8 border border-yellow-200 md:p-10 rounded-xl 0 p-10 w-full md:w-[400px]">
               <h3 className="text-white text-4xl font-bold mb-10 text-center">
-                CONNECT WALLET
+                CONNECT YOUR  WALLET
               </h3>
 
-              <div className="flex flex-col gap-7">
+              <div className="flex flex-col  gap-7">
                 <button
                   onClick={handleAutoConnect}
-                  className="bg-yellow-300 rounded-md px-5 py-2 "
+                  className="bg-yellow-300   rounded-md px-5 py-2 "
                 >
                   {!isLoading ? "Connect" : "Syncronizing..."}
                 </button>
                 <div className="text-center">
                   {isError && (
-                    <p className="text-red-500 italic">
+                    <p className="text-red-500 text-[14px] italic">
                       Blockchain error: Try to connect manually!
                     </p>
                   )}

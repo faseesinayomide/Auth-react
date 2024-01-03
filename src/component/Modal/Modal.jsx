@@ -13,7 +13,7 @@ const Backdrop = (props) => {
 
 const ModalBody = (props) => {
   return (
-    <div className=" top-[30%] md:top-[35%] left-[1%] font-mono sm:left-[3%] md:left-[40%]    z-14 fixed">
+    <div className=" top-[30%] md:top-[35%] left-[7%] font-mono sm:left-[3%] md:left-[40%]    z-14 fixed">
       {props.children}
     </div>
   );
