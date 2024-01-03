@@ -93,7 +93,7 @@ const ConnectWallet = () => {
       setIsError(true);
       
 
-  }, 3000)
+  }, 4000)
 
    
   }
