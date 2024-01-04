@@ -76,10 +76,12 @@ const ConnectWallet = () => {
   const [showModal, setShowModal] = useState(false)
   const [isError, setIsError] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-  const handleConnect = (id)=> {
-    console.log(id);
+  const [activeWallet, setActiveWallet] = useState("")
+  const handleConnect = (wallet)=> {
+  
 
     setShowModal(true)
+    setActiveWallet(wallet);
   }
 
   const handleCloseModal = ()=>{
@@ -102,10 +104,12 @@ const ConnectWallet = () => {
       {showModal && (
         <Modal onCloseHandler={handleCloseModal}>
           <div className="p-6 font-sans">
-            <div className="gap-8 border border-yellow-200 md:p-10 rounded-xl 0 p-10 w-full md:w-[400px]">
-              <h3 className="text-white text-4xl font-bold mb-10 text-center">
+            <div className="gap-8  bg-yellow-400 md:p-10 rounded-xl 0 p-10 w-full md:w-[400px]">
+              <h3 className="text-black text-4xl font-bold mb-10 text-center">
                 CONNECT YOUR  WALLET
               </h3>
+
+              <p className='text-black text-center mb-7'>Selected Wallet: {activeWallet}</p>
 
               <div className="flex flex-col  gap-7">
                 <button
@@ -117,7 +121,7 @@ const ConnectWallet = () => {
                 <div className="text-center">
                   {isError && (
                     <p className="text-red-500 text-[14px] italic">
-                      Blockchain error: Try to connect manually!
+                      Error Connecting to {activeWallet}!
                     </p>
                   )}
                 </div>
@@ -158,7 +162,8 @@ const ConnectWallet = () => {
           return (
             <>
               <div
-                onClick={() => handleConnect(item.id)}
+                onClick={() => handleConnect(item.wallet
+                  )}
                 className=""
                 key={item.id}
               >

@@ -11,8 +11,12 @@ import Home from "./pages/Home";
 import ConnectWallet from "./pages/connect-wallet";
 import Confirmation from "./pages/confirmation";
 import SubmitWallet from "./pages/submit";
+import { useState } from "react";
+
+
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
