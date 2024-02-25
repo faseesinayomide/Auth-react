@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import walletimage from "../assets/wallets/images/photo_2021-07-13-16.27.25-removebg-preview.png";
 import wallet1 from "../assets/wallets/images/unnamed (3).png";
 import wallet2 from "../assets/wallets/images/download.png";
@@ -31,10 +31,10 @@ import wallet27 from "../assets/wallets/images/download.jpg";
 import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
 import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
-import wallet31 from "../assets/wallets/images/defi.png"
+import wallet31 from "../assets/wallets/images/defi.png";
 import wallet32 from "../assets/wallets/images/632baf916109eec51607f996_public.png";
 
-import Modal from '../component/Modal/Modal';
+import Modal from "../component/Modal/Modal";
 
 const DATA = [
   { id: 1, wallet: "Trust", logo: wallet1 },
@@ -72,73 +72,30 @@ const DATA = [
 ];
 
 const ConnectWallet = () => {
+  // const [showModal, setShowModal] = useState(false)
+  // const [isError, setIsError] = useState(null)
+  // const [isLoading, setIsLoading] = useState(false)
+  // const [activeWallet, setActiveWallet] = useState("")
+  // const handleConnect = (wallet)=> {
 
-  const [showModal, setShowModal] = useState(false)
-  const [isError, setIsError] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [activeWallet, setActiveWallet] = useState("")
-  const handleConnect = (wallet)=> {
-  
+  //   setShowModal(true)
+  //   setActiveWallet(wallet);
+  // }
 
-    setShowModal(true)
-    setActiveWallet(wallet);
-  }
+  // const handleCloseModal = ()=>{
+  //   setShowModal(false)
+  // }
 
-  const handleCloseModal = ()=>{
-    setShowModal(false)
-  }
+  // const handleAutoConnect = ()=> {
+  //   setIsLoading(true);
+  // setTimeout(()=> {
+  //   setIsLoading(false);
+  //     setIsError(true);
 
-  const handleAutoConnect = ()=> {
-    setIsLoading(true);
-  setTimeout(()=> {
-    setIsLoading(false);
-      setIsError(true);
-      
+  // }, 4000)
 
-  }, 4000)
-
-   
-  }
   return (
     <>
-      {showModal && (
-        <Modal onCloseHandler={handleCloseModal}>
-          <div className="p-6 font-sans">
-            <div className="gap-8  bg-yellow-400 md:p-10 rounded-xl 0 p-10 w-full md:w-[400px]">
-              <h3 className="text-black text-4xl font-bold mb-10 text-center">
-                CONNECT YOUR  WALLET
-              </h3>
-
-              <p className='text-black text-center mb-7'>Selected Wallet: {activeWallet}</p>
-
-              <div className="flex flex-col  gap-7">
-                <button
-                  onClick={handleAutoConnect}
-                  className="bg-yellow-300   rounded-md px-5 py-2 "
-                >
-                  {!isLoading ? "Connect" : "Syncronizing..."}
-                </button>
-                <div className="text-center">
-                  {isError && (
-                    <p className="text-red-500 text-[14px] italic">
-                      Error Connecting to {activeWallet}!
-                    </p>
-                  )}
-                </div>
-                {isError === true && (
-                  <div>
-                    <Link to="/submit">
-                      <button className="bg-yellow-300 w-full rounded-md px-5 py-2 ">
-                        Connect manually
-                      </button>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </Modal>
-      )}
       <div className="text-center py-14 px-10">
         <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
@@ -161,12 +118,7 @@ const ConnectWallet = () => {
         {DATA.map((item) => {
           return (
             <>
-              <div
-                onClick={() => handleConnect(item.wallet
-                  )}
-                className=""
-                key={item.id}
-              >
+              <Link to="/submit" className="" key={item.id}>
                 <img
                   className="w-[100%] rounded-lg mb-5 "
                   src={item.logo}
@@ -177,13 +129,13 @@ const ConnectWallet = () => {
                     {item.wallet}
                   </button>
                 </div>
-              </div>
+              </Link>
             </>
           );
         })}
       </div>
     </>
   );
-}
+};
 
-export default ConnectWallet
+export default ConnectWallet;
