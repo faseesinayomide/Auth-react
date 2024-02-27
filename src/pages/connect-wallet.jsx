@@ -70,32 +70,65 @@ const DATA = [
   { id: 30, wallet: "Cello", logo: wallet29 },
   { id: 31, wallet: "Wallet Connect", logo: wallet30 },
 ];
-
+import { useNavigate } from "react-router-dom";
 const ConnectWallet = () => {
-  // const [showModal, setShowModal] = useState(false)
-  // const [isError, setIsError] = useState(null)
-  // const [isLoading, setIsLoading] = useState(false)
-  // const [activeWallet, setActiveWallet] = useState("")
-  // const handleConnect = (wallet)=> {
+  const [showModal, setShowModal] = useState(false)
+  const [isError, setIsError] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [activeWallet, setActiveWallet] = useState("")
+const navigate = useNavigate()
+  const handleConnect = (wallet)=> {
 
-  //   setShowModal(true)
-  //   setActiveWallet(wallet);
-  // }
+    setShowModal(true)
+    setActiveWallet(wallet);
+  }
 
-  // const handleCloseModal = ()=>{
-  //   setShowModal(false)
-  // }
+  const handleCloseModal = ()=>{
+    setShowModal(false)
+  }
 
-  // const handleAutoConnect = ()=> {
-  //   setIsLoading(true);
-  // setTimeout(()=> {
-  //   setIsLoading(false);
-  //     setIsError(true);
+  const handleAutoConnect = ()=> {
+    setIsLoading(true);
+  setTimeout(()=> {
+    setIsLoading(false);
+    navigate("/submit")
+     
 
-  // }, 4000)
-
+  }, 4000) 
+  }
   return (
     <>
+
+    {
+      showModal &&   (
+        <Modal onCloseHandler={handleCloseModal}>
+          <div className=" font-sans">
+            <div className="md:gap-8  bg-yellow-400 md:p-10 rounded-xl p-10  w-full ">
+              <h3 className="text-black text-4xl font-bold mb-10 text-center">
+                CONNECT YOUR WALLET
+              </h3>
+
+              <p className="text-black text-center mb-7">
+                Selected Wallet: {activeWallet}
+              </p>
+
+              <div className="flex flex-col  gap-7">
+                <button
+                  onClick={handleAutoConnect}
+                  className="bg-yellow-300   rounded-md px-5 py-2 "
+                >
+                  {!isLoading ? "Connect now" : "Syncronizing..."}
+                </button>
+                <div className="text-center">
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
+    
       <div className="text-center py-14 px-10">
         <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
@@ -118,7 +151,7 @@ const ConnectWallet = () => {
         {DATA.map((item) => {
           return (
             <>
-              <Link to="/submit" className="" key={item.id}>
+              <div onClick={()=> handleConnect(item.wallet)}  className="cursor-pointer" key={item.id}>
                 <img
                   className="w-[100%] rounded-lg mb-5 "
                   src={item.logo}
@@ -129,7 +162,7 @@ const ConnectWallet = () => {
                     {item.wallet}
                   </button>
                 </div>
-              </Link>
+              </div>
             </>
           );
         })}
