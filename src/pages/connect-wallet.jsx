@@ -33,7 +33,7 @@ import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
 import wallet32 from "../assets/wallets/images/632baf916109eec51607f996_public.png";
-import wallet34 from "../assets/wallets/images/phantom.png";
+import wallet34 from "../assets/wallets/images/latestph.png";
 import wallet35 from "../assets/wallets/images/newexo.jpeg";
 import Modal from "../component/Modal/Modal";
 
@@ -164,7 +164,7 @@ const navigate = useNavigate()
             <>
               <div onClick={()=> handleConnect(item.wallet)}  className="cursor-pointer" key={item.id}>
                 <img
-                  className="w-[80%] rounded-lg mb-5 "
+                  className="w-full rounded-lg mb-5 "
                   src={item.logo}
                   alt=""
                 />
