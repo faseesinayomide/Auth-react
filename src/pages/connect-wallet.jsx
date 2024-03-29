@@ -33,7 +33,8 @@ import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
 import wallet32 from "../assets/wallets/images/632baf916109eec51607f996_public.png";
-
+import wallet34 from "../assets/wallets/images/phantom.png";
+import wallet35 from "../assets/wallets/images/newexo.jpeg";
 import Modal from "../component/Modal/Modal";
 
 const DATA = [
@@ -41,6 +42,16 @@ const DATA = [
   { id: 2, wallet: "Metamask", logo: wallet2 },
   { id: 3, wallet: "Coinbase", logo: wallet3 },
   { id: 4, wallet: "Crypto.com", logo: wallet4 },
+  {
+    id: 33,
+    wallet: "Phantom",
+    logo: wallet34,
+  },
+  {
+    id: 34,
+    wallet: "Exodus",
+    logo: wallet35,
+  },
   { id: 5, wallet: "Defi", logo: wallet31 },
   { id: 32, wallet: "bifrost", logo: wallet32 },
   { id: 6, wallet: "Nimiq", logo: wallet5 },
@@ -131,7 +142,7 @@ const navigate = useNavigate()
     
       <div className="text-center py-14 px-10">
         <img
-          className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
+          className="w-[100%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
           src={walletimage}
           alt=""
         />
@@ -153,7 +164,7 @@ const navigate = useNavigate()
             <>
               <div onClick={()=> handleConnect(item.wallet)}  className="cursor-pointer" key={item.id}>
                 <img
-                  className="w-[100%] rounded-lg mb-5 "
+                  className="w-[80%] rounded-lg mb-5 "
                   src={item.logo}
                   alt=""
                 />
