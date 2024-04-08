@@ -72,7 +72,7 @@ const Footer = () => {
         <div className=" text-center text-yellow-400">
           <div className="">
             <p className="text-xl">
-              Copyright Resolve protocol {year}. All rights reserved.
+              Copyright Resolve protocol {year}. 
             </p>
           </div>
         </div>

@@ -32,28 +32,25 @@ import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
 import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
-import wallet32 from "../assets/wallets/images/632baf916109eec51607f996_public.png";
-import wallet34 from "../assets/wallets/images/latestph.png";
-import wallet35 from "../assets/wallets/images/newexo.jpeg";
-import Modal from "../component/Modal/Modal";
+import wallet32 from "../assets/wallets/images/latestph.png";
+import wallet33 from "../assets/wallets/images/alpha.webp";
+import wallet34 from "../assets/wallets/images/1inch.svg";
+import wallet35 from "../assets/wallets/images/OKX_Logo_Logo.webp";
+
+import { CiSearch } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
+import Loader from "../component/Loader/Loader";
 
 const DATA = [
   { id: 1, wallet: "Trust", logo: wallet1 },
   { id: 2, wallet: "Metamask", logo: wallet2 },
   { id: 3, wallet: "Coinbase", logo: wallet3 },
+  { id: 32, wallet: "Phantom", logo: wallet32 },
+  { id: 33, wallet: "Aplha", logo: wallet33 },
+  { id: 34, wallet: "1inch", logo: wallet34 },
+  { id: 31, wallet: "OKX", logo: wallet35 },
   { id: 4, wallet: "Crypto.com", logo: wallet4 },
-  {
-    id: 33,
-    wallet: "Phantom",
-    logo: wallet34,
-  },
-  {
-    id: 34,
-    wallet: "Exodus",
-    logo: wallet35,
-  },
   { id: 5, wallet: "Defi", logo: wallet31 },
-  { id: 32, wallet: "bifrost", logo: wallet32 },
   { id: 6, wallet: "Nimiq", logo: wallet5 },
   { id: 7, wallet: "Safepal", logo: wallet6 },
   { id: 8, wallet: "Authereum", logo: wallet7 },
@@ -81,102 +78,116 @@ const DATA = [
   { id: 30, wallet: "Cello", logo: wallet29 },
   { id: 31, wallet: "Wallet Connect", logo: wallet30 },
 ];
-import { useNavigate } from "react-router-dom";
+
 const ConnectWallet = () => {
-  const [showModal, setShowModal] = useState(false)
-  const [isError, setIsError] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [activeWallet, setActiveWallet] = useState("")
-const navigate = useNavigate()
-  const handleConnect = (wallet)=> {
+  const [showWallet, setShowWallet] = useState(false);
+  const [enteredValue, setEnteredValue] = useState("");
+  const [isLoading, setLoading] = useState(false)
+  const [walletIsloading, setWalletIsloading] = useState(false)
 
-    setShowModal(true)
-    setActiveWallet(wallet);
+  const navigate = useNavigate()
+  const handleValueChange = (e) => {
+    const currentvalue = e.target.value;
+
+    setEnteredValue(currentvalue);
+  };
+
+  const handleShowWallet = ()=> {
+
+    setLoading(true)
+    setTimeout(()=> {
+setShowWallet(true);
+setLoading(false)
+    }, 3000)
+    
   }
 
-  const handleCloseModal = ()=>{
-    setShowModal(false)
-  }
+  const handleSubmitRoute = ()=>{
 
-  const handleAutoConnect = ()=> {
-    setIsLoading(true);
-  setTimeout(()=> {
-    setIsLoading(false);
-    navigate("/submit")
+    setWalletIsloading(true)
+    setTimeout(()=> {
      
-
-  }, 4000) 
+      navigate("/submit")
+      
+    }, 3000)
   }
   return (
     <>
 
-    {
-      showModal &&   (
-        <Modal onCloseHandler={handleCloseModal}>
-          <div className=" font-sans">
-            <div className="md:gap-8  bg-yellow-400 md:p-10 rounded-xl p-10  w-full ">
-              <h3 className="text-black text-4xl font-bold mb-10 text-center">
-                CONNECT YOUR WALLET
-              </h3>
-
-              <p className="text-black text-center mb-7">
-                Selected Wallet: {activeWallet}
-              </p>
-
-              <div className="flex flex-col  gap-7">
-                <button
-                  onClick={handleAutoConnect}
-                  className="bg-yellow-300   rounded-md px-5 py-2 "
-                >
-                  {!isLoading ? "Connect now" : "Syncronizing..."}
-                </button>
-                <div className="text-center">
-                  
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </Modal>
-      )}
-    
-      <div className="text-center py-14 px-10">
-        <img
-          className="w-[100%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
+    {walletIsloading ? <Loader /> : ""}
+      <div className="container mx-auto py-10 md:py-20">
+        <div className="text-center mb-10 md:mb-14 ">
+          {/* <img
+          className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
           src={walletimage}
           alt=""
-        />
-        <h1 className="text-slate-50 text-6xl mb-8 font-semibold">
-          How it works ?
-        </h1>
+        /> */}
+          <h1 className="text-slate-50 text-3xl md:text-5xl mb-8 font-bold">
+           Connect wallet
+          </h1>
 
-        <p className="text-slate-300 w-full sm:w-full md:w-[50%] lg:w-[50%] mx-auto text-[15px] leading-loose">
-          {" "}
-          Multiple iOS and Android wallets support the WalletConnect protocol.
-          Interaction between mobile apps and mobile browsers are supported via
-          mobile deep linking.
-        </p>
-      </div>
+          <p className="text-slate-300 w-full   md:w-[60%] mx-auto text-[15px] leading-[2.6]">
+            {" "}
+            Multiple iOS and Android wallets support the WalletConnect protocol.
+            Interaction between mobile apps and mobile browsers are supported
+            via mobile deep linking.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-3   sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-20 gap-x-24 px-10 container mx-auto py-[10%] ">
-        {DATA.map((item) => {
-          return (
-            <>
-              <div onClick={()=> handleConnect(item.wallet)}  className="cursor-pointer" key={item.id}>
-                <img
-                  className="w-full rounded-lg mb-5 "
-                  src={item.logo}
-                  alt=""
+        {showWallet ? (
+          <div className="px-3 md:px-0 rounded-3xl  py-10 bg-[#101B24] h-full md:bg-transparent">
+            <form className=" flex  md:justify-end mb-10" action="">
+              <div className="relative ">
+                <CiSearch className="absolute text-white text-3xl top-3 left-3" />
+
+                <input
+                  className="w-[320px] bg-[#101B24] border border-[#cccccc44]  outline-none pl-14  text-white py-2 rounded-lg px-3   md:w-[400px]"
+                  type="text"
+                  placeholder="Search wallet"
+                  onChange={handleValueChange}
+                  value={enteredValue}
                 />
-                <div className="flex justify-center">
-                  <button className="  text-slate-50 text-[14px]">
-                    {item.wallet}
-                  </button>
-                </div>
               </div>
-            </>
-          );
-        })}
+            </form>
+            <div className="grid grid-cols-3 gap-x-2 md:gap-x-10  font-mono sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-14   mx-auto  ">
+              {DATA.filter((wallet) => {
+                return enteredValue.toLowerCase() === ""
+                  ? wallet
+                  : wallet.wallet.includes(enteredValue);
+              }).map((item) => {
+                return (
+                  <Link
+                  onClick={handleSubmitRoute}
+                    className=" shadow-md bg-[#203547] rounded-xl ease-linear transition-all hover:scale-95 p-4"
+                    to=""
+                  >
+                    <div className="" key={item.id}>
+                      <img
+                        className="w-[100%] md:w-[100px] mx-auto rounded-lg mb-3 "
+                        src={item.logo}
+                        alt=""
+                      />
+                      <div className="text-center">
+                        <button className="  text-slate-50 text-[10px] md:text-sm">
+                          {item.wallet}
+                        </button>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <div className="text-center">
+            <button
+              onClick={handleShowWallet}
+              className="  bg-yellow-300 w-[250px] md:w-[400px] px-10 py-2 rounded-md"
+            >
+              {!isLoading ? "Slect wallet" : "Loading..."}
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

@@ -51,8 +51,8 @@ const SubmitWallet = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <div className="py-20">
-        <div className="flex justify-center gap-10 sm:gap-10 md:gap-20 lg:gap-20  md:mb-10 ">
+      <div className="py-20 container">
+        <div className="flex justify-center gap-5 sm:gap-10 md:gap-20 lg:gap-20  md:mb-10 ">
           <button
             onClick={() => switchHandle(1)}
             className={`bg-yellow-500 px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
